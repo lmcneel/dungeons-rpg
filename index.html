@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yet Another Dungeon Game...</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="https://kit.fontawesome.com/28443f39bd.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-dark">
+    <div id="app" class="d-flex flex-column justify-content-between">
+        <header class="bg-warning">
+            <div class="d-flex justify-content-between">
+                <div id="player-one-name text-center" class="px-5">
+                    <h2>Player 1</h2>
+                </div>
+                <div>
+                    <h1><span class="text-primary mr-3"><i class="fad fa-dice-d10"></i></span>It's a good day to die in a dungeon</h1>
+                </div>
+                <div id="player-two-name" class="px-5">
+                   <h2>Player 2</h2>
+                </div>
+            </div>
+        </header>
+        <div id="game-play" class="flex-grow-1 border-primary border shadow w-100 d-flex justify-content-around">
+            <div id="game-view" class="align-self-center text-light text-center" data-screen="start">
+                <h2 data-bind="title"></h2>
+                <div class="content d-flex justify-content-around" data-bind="content">
+
+                </div>
+            </div>
+        </div>
+        <div id="chat-box" class="text-light border-light border w-100 h-25 d-flex flex-column">
+            <div class="chat flex-grow-1 p-3">
+
+            </div>
+            <input class="form-control w-100 h-25" id="chat" name="chat" placeholder="Start typing to chat" />
+        </div>
+    </div>
+    <!-- JavaScript -->
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-analytics.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyC17ZBACq2yHfM2q6-WzZZGzGlMvf3BO64",
+        authDomain: "yet-another-dungeon-game.firebaseapp.com",
+        databaseURL: "https://yet-another-dungeon-game.firebaseio.com",
+        projectId: "yet-another-dungeon-game",
+        storageBucket: "yet-another-dungeon-game.appspot.com",
+        messagingSenderId: "920306894250",
+        appId: "1:920306894250:web:b4ecfc2fde71116a7217d3",
+        measurementId: "G-4SNC3NNT2C"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    </script>
+    <script src="./assets/js/game.js"></script>
+</body>
+</html>
