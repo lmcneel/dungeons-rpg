@@ -9,3 +9,7 @@ Yet another Dungeon RPG game....
 - JavaScript
 - Firebase
 
+## Collaborators
+
+- Tish
+- Brandon
